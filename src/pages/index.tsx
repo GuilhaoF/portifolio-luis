@@ -1,3 +1,4 @@
+import { CardTechsComponent } from '@/components/CardTechs'
 import { NavbarComponent } from '@/components/Navbar'
 import { ProfileHeroComponent } from '@/components/ProfileHero'
 import Head from 'next/head'
@@ -16,6 +17,10 @@ export default function Home() {
       </Head>
       <NavbarComponent />
       <ProfileHeroComponent />
+      <div className="flex items-center justify-center mt-6">
+        <CardTechsComponent />
+      </div>
+
     </>
   )
 }
