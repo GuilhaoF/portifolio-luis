@@ -8,10 +8,11 @@ import { DiscordLogo, DownloadSimple, GithubLogo, LinkedinLogo } from "@phosphor
 export function ProfileHeroComponent() {
 
   function handleDownloadCvPdf() {
-    const url = '../../public/curriculo/Luis.pdf'
+    const url = 'https://drive.google.com/file/d/1_6fvaZej9VlsLGra-I5ook8xSXiLqwS7/view?usp=drive_link'
     const path = document.createElement('a')
     path.href = url;
     path.download = 'luis.pdf';
+    path.target = 'blank'
     path.click();
   }
 

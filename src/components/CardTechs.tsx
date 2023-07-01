@@ -41,7 +41,7 @@ export function CardTechsComponent() {
           <>
             <div
               key={index}
-              className="p-4 bg-gray-200 rounded-lg flex flex-col items-center shadow-gray-100"
+              className=" p-3 pl-1 pr-1 bg-gray-200 rounded-lg flex flex-col items-center shadow-gray-100"
             >
               <div className="mb-4">
                 <Image src={icon.src} alt={icon.alt} quality={80} />
