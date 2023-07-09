@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import ProfileImage from '../assets/Hero.jpg';
 import { ContactLinks } from "./ContactLinks";
-import { DiscordLogo, DownloadSimple, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { DiscordLogo, DownloadSimple, GithubLogo, LinkedinLogo, WhatsappLogo } from "@phosphor-icons/react";
 
 
 export function ProfileHeroComponent() {
@@ -55,8 +55,8 @@ export function ProfileHeroComponent() {
                 <GithubLogo size={56} className='cursor-pointer text-ocean-blue-700 transition-all duration-200 hover:text-navy-blue-300' />
               </ContactLinks>
 
-              <ContactLinks pathName="/">
-                <DiscordLogo size={56} className='cursor-pointer text-ocean-blue-700 transition-all duration-200 hover:text-navy-blue-300' />
+              <ContactLinks pathName="https://api.whatsapp.com/send?phone=5599992169563">
+              <WhatsappLogo size={56} className='cursor-pointer text-ocean-blue-700 transition-all duration-200 hover:text-navy-blue-300'/>
               </ContactLinks>
 
             </div>
