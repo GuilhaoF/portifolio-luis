@@ -32,7 +32,11 @@ export function ProfileHeroComponent() {
               </h1>
 
               <p className="text-ocean-blue-700 text-sm md:text-base">
-                Olá! me chamo Luís Felipe e sou desenvolvedor front-end e mobile, a baixo você irá ver minhas tecnologias e projetos que desenvolvi.
+                Olá, sou <strong>Luis Felipe G Silva</strong>, um desenvolvedor front-end com uma paixão ardente pelo mundo da web e da tecnologia.
+              </p>
+              <p className="text-ocean-blue-700 text-sm md:text-base">
+                Meu objetivo principal é criar experiências digitais que cativem os usuários e proporcionem uma jornada suave e agradável. Como um desenvolvedor front-end e mobile,
+                minha especialidade está em traduzir designs e conceitos em código, combinando todas as tecnologias listadas nesse portifolio para dar vida a websites e aplicativos.
               </p>
               <button onClick={handleDownloadCvPdf} className="flex items-center justify-center border-[1px] border-[#113657] px-8 py-2 rounded-lg gap-2 font-bold transition text-[#000] text-lg bg-ocean-blue-700 hover:bg-ocean-blue-300">
                 <DownloadSimple size={44} className="text-green-700" />
@@ -56,7 +60,7 @@ export function ProfileHeroComponent() {
               </ContactLinks>
 
               <ContactLinks pathName="https://api.whatsapp.com/send?phone=5599992169563">
-              <WhatsappLogo size={56} className='cursor-pointer text-ocean-blue-700 transition-all duration-200 hover:text-navy-blue-300'/>
+                <WhatsappLogo size={56} className='cursor-pointer text-ocean-blue-700 transition-all duration-200 hover:text-navy-blue-300' />
               </ContactLinks>
 
             </div>
