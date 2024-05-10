@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from 'next/image';
-import Hero from "@/assets/Hero.jpg";
+import Hero from "../assets/Hero.jpg";
 
 export default function Home() {
   return (
