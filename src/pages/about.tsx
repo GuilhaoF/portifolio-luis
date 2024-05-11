@@ -19,7 +19,7 @@ export default function About() {
           className="rounded-full"
           alt="Luis"
         />
-        <Accordion
+        {/* <Accordion
           type="single"
           collapsible
           className=" w-3/4 border-2 border-green-700"
@@ -28,12 +28,7 @@ export default function About() {
             <AccordionTrigger>O que eu gosto?</AccordionTrigger>
             <AccordionContent className="flex justify-center text-center max-w-24 overflow-auto font-bold">
               <p>
-              Meu objetivo principal é criar experiências digitais que cativem
-              os usuários e proporcionem uma jornada suave e agradável. Como um
-              desenvolvedor front-end e mobile, minha especialidade está em
-              traduzir designs e conceitos em código, combinando todas as
-              tecnologias listadas nesse portifolio para dar vida a websites e
-              aplicativos.
+            
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -53,7 +48,7 @@ export default function About() {
             <AccordionTrigger>Melhor Projeto?</AccordionTrigger>
             <AccordionContent className="mx-2  text-base font-bold">Nextjs Ifood Clone</AccordionContent>
           </AccordionItem>
-        </Accordion>
+        </Accordion> */}
       </div>
     </Layout>
   );
