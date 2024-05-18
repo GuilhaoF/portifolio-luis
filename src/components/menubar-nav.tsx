@@ -1,116 +1,97 @@
 import {
-  CodeIcon,
   ContactIcon,
-  HomeIcon,
+  FolderKanbanIcon,
+  GanttChart,
   InfoIcon,
-  MenuIcon,
-  XIcon,
+  Menu,
 } from "lucide-react";
-import Image from "next/image";
-import Hero from "../assets/Hero.jpg";
-import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { Switch } from "./ui/switch";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export function MenuBarNav() {
-  const [isOpen, setIsOpen] = useState(true);
+  return (
+    <header className="sticky top-0 flex h-16 items-center  gap-4 border-b border-green-700 px-4 md:px-6">
+      <nav className="hidden flex-col gap-6 text-lg font-medium  bg-white  md:flex md:flex-row md:items-center md:justify-center md:gap-5 md:text-sm lg:gap-6">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-lg font-semibold md:text-base"
+        >
+          <Avatar className="border-2 rounded-full border-green-700">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>LF</AvatarFallback>
+          </Avatar>
+        </Link>
+        <Link
+          href="/about"
+          className="text-foreground transition-colors hover:text-foreground hover:text-green-700"
+        >
+          Experiencias
+        </Link>
+        <Link
+          href="/projects"
+          className="text-muted-foreground transition-colors hover:text-foreground hover:text-green-700"
+        >
+          Projetos
+        </Link>
+        <Link
+          href="/contact"
+          className="text-muted-foreground transition-colors hover:text-foreground hover:text-green-700"
+        >
+          Contato e Localização
+        </Link>
+      </nav>
 
-  const handleMenuClick = () => {
-    setIsOpen(!isOpen);
-  };
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) {
-        // se a tela for maior que 768px ele abre o menu
-        setIsOpen(true);
-      } else {
-        setIsOpen(false);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    // serve para remover o eventListener quando o componente for desmontado
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  return isOpen ? (
-    <>
-      <aside
-        className={`flex flex-col w-80  min-h-screen px-6 py-8  overflow-y-auto  bg-green-600 border-r `}
-      >
-        {/* parte de cima com icone */}
-        <div className="flex items-center justify-between">
-          <div className="text-2xl font-semibold text-white">
-            <span>Menu</span>
-          </div>
-
-          <div className="">
-            <Button
-              onClick={handleMenuClick}
-              className="p-2 -mr-2 text-white transform rounded-md hover:animate-shake"
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="outline" size="icon" className="shrink-0 md:hidden">
+            <Menu className="h-5 w-5" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="left" className="bg-white">
+          <nav className="grid gap-6 text-lg font-medium">
+            <Link
+              href="#"
+              className="flex items-center gap-2 text-lg font-semibold"
             >
-              <XIcon size={24} />
-            </Button>
-          </div>
-        </div>
-        {/* parte de baixo com os links */}
-        <div className="flex flex-col justify-between flex-1 mt-6 px-1">
-          <nav>
-            <div className="flex items-center py-2 mt-5 text-white rounded-md hover:animate-shake">
-              <HomeIcon size={24} className="flex-shrink-0" />
-              <Link href="/" className="mx-2 font-medium">
-                Inicio
-              </Link>
-            </div>
-
-            <div className="flex items-center py-2 mt-5 text-white  transform rounded-md hover:animate-shake">
-              <InfoIcon size={24} className="flex-shrink-0" />
-              <Link href="/about" className="mx-2 font-medium">
-                Sobre Detalhado
-              </Link>
-            </div>
-
-            <div className="flex items-center py-2 mt-5 text-white  transform rounded-md hover:animate-shake">
-              <CodeIcon size={24} className="flex-shrink-0" />
-              <span className="mx-2 font-medium">Projetos</span>
-            </div>
-
-            <div className="flex items-center py-2 mt-5 text-white  transform rounded-md hover:animate-shake">
-              <ContactIcon size={24} className="flex-shrink-0" />
-              <Link href="/contact" className="mx-2 font-medium">Contato</Link>
-            </div>
+              <Avatar className="border-2 rounded-full border-green-700">
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>LF</AvatarFallback>
+              </Avatar>
+              <p>Luis Felipe G</p>
+            </Link>
+            <Link
+              href="/"
+              className="flex gap-2 items-center hover:text-foreground"
+            >
+              <InfoIcon size={28} />
+              Inicio
+            </Link>
+            <Link
+              href="#"
+              className="flex gap-2 items-center text-muted-foreground hover:text-foreground"
+            >
+              <GanttChart size={28} />
+              Experiencias
+            </Link>
+            <Link
+              href="#"
+              className="flex gap-2 items-center text-muted-foreground hover:text-foreground"
+            >
+              <FolderKanbanIcon size={28} />
+              Projetos
+            </Link>
+            <Link
+              href="#"
+              className="flex gap-2 items-center text-muted-foreground hover:text-foreground"
+            >
+              <ContactIcon size={28} />
+              Contato e Localizacao
+            </Link>
           </nav>
-
-          <div className="flex items-center">
-            <Image
-              src={Hero}
-              alt="avatar"
-              width={40}
-              height={40}
-              className="object-cover w-10 h-10 mx-2 rounded-full"
-            />
-            <span className="flex-1 mx-2 font-medium text-gray-800 dark:text-gray-200">
-              Luis Felipe
-            </span>
-            {/* <div className="flex items-center lg:hidden">
-              <div className="flex items-center h-6">
-                <Switch checked className="bg-white mr-2 w-6" />
-                <label>Mode</label>
-              </div>
-            </div> */}
-          </div>
-        </div>
-      </aside>
-    </>
-  ) : (
-    <div className="items-start p-6  border-r-4 border-green-600">
-      <MenuIcon
-        size={34}
-        className="text-green-500"
-        onClick={handleMenuClick}
-      />
-    </div>
+        </SheetContent>
+      </Sheet>
+    </header>
   );
 }

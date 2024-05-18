@@ -1,22 +1,51 @@
 import Layout from "@/components/layout";
 import { Badge } from "@/components/ui/badge";
-
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
-import { ContactIcon, MailIcon } from "lucide-react";
+import {ContactIcon, MailIcon } from "lucide-react";
 import Link from "next/link";
-
+import {
+  GoogleMap,
+  MarkerF,
+  useLoadScript,
+} from "@react-google-maps/api";
+import { useMemo } from "react";
 
 export default function Contact() {
+  const libraries = useMemo(() => ["places"], []);
+  const mapCenter = useMemo(
+    () => ({ lat:-4.869266, lng: -43.333961 }),
+    []
+  );
+  const mapOptions = useMemo<google.maps.MapOptions>(
+    () => ({
+      disableDefaultUI: true,
+      clickableIcons: true,
+      scrollwheel: false,
+    }),
+    []
+  );
+
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: "AIzaSyDtgCZZ8vbDMHVEH8yAGupib-rd7VgfuEY",
+    libraries: libraries as any,
+  });
+
+  if (!isLoaded) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <Layout>
-      <div className="flex items-center justify-center min-h-screen mx-auto">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2">
+      <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
+        <div className="grid gap-4 md:grid-cols-1 md:gap-8 lg:grid-cols-2">
+          {/* Card Contato */}
           <Card className="">
             <CardHeader>
               <CardTitle>Contatos</CardTitle>
@@ -35,6 +64,7 @@ export default function Contact() {
             </CardContent>
           </Card>
 
+          {/* Card Redes Sociais */}
           <Card className="flex-wrap">
             <CardHeader>
               <CardTitle>Redes Sociais</CardTitle>
@@ -47,17 +77,42 @@ export default function Contact() {
                 Instagram
               </Badge>
               <Badge className=" border border-blue-500" variant={"outline"}>
-                 <Link href="https://www.linkedin.com/in/luis-felipe-silv/">
-                 Linkedin
-                 </Link>
+                <Link href="https://www.linkedin.com/in/luis-felipe-silv/">
+                  Linkedin
+                </Link>
               </Badge>
               <Badge className=" border border-green-500" variant={"outline"}>
-               Whatsapp Pessoal
+                Whatsapp Pessoal
               </Badge>
             </CardContent>
           </Card>
+
+          <div className="grid gap-4 md:gap-8">
+            <Card className="xl:col-span-2" x-chunk="dashboard-01-chunk-4">
+              <CardHeader className="flex flex-row items-center">
+                <div className="grid gap-2">
+                  <CardTitle>Localizaçao</CardTitle>
+                  <CardDescription>
+                   Veja no mapa minha localizaçao
+                  </CardDescription>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <GoogleMap
+                  options={mapOptions}
+                  zoom={14}
+                  center={mapCenter}
+                  mapTypeId={google.maps.MapTypeId.ROADMAP}
+                  mapContainerStyle={{ width: "800px", height: "800px" }}
+                  onLoad={() => console.log("Map Component Loaded...")}
+                >
+                   <MarkerF position={mapCenter} onLoad={() => console.log('Marker Loaded')} />
+                </GoogleMap>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </div>
+      </main>
     </Layout>
   );
 }

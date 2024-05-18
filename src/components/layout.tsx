@@ -9,9 +9,9 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="flex">
+    <div>
       <MenuBarNav />
-      <main className="flex-grow">
+      <main>
         {children}
       </main>
     </div>

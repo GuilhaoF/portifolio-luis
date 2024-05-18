@@ -14,15 +14,16 @@ export function BadgeTechs(){
     { name: 'Tailwind Css', Icon: SiTailwindcss},
     { name: 'Shadcn UI', Icon: SiShadcnui},
     { name: 'Firebase', Icon: RiFirebaseLine},
+
   ];
 
 
   return(
-    <div className="flex flex-wrap items-center justify-center gap-4 animate-bounce mt-8">
+    <div className="flex items-start flex-col gap-4 mt-8">
     {techs.map((tech, index) => (
       <Badge key={index} >
-        <tech.Icon size={24} />
-        <span>{tech.name}</span>
+        <tech.Icon size={32} />
+        <span className="ml-4 text-lg">{tech.name}</span>
       </Badge>
     ))}
     </div>

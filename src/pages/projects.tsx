@@ -1,14 +1,8 @@
 import Layout from "@/components/layout";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import Image from "next/image";
 import ManutencaoLogo from '../assets/maintenance.png' ;
 
-export default function About() {
+export default function Projects(){
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center mx-auto">
