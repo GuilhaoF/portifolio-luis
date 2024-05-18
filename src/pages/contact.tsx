@@ -48,7 +48,7 @@ export default function Contact() {
   return (
     <Layout>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
-        <div className="grid gap-4 md:grid-cols-1 md:gap-8 lg:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-2">
           {/* Card Contato */}
           <Card className="">
             <CardHeader>
@@ -91,7 +91,7 @@ export default function Contact() {
             </CardContent>
           </Card>
 
-          <div className=" col-span-2 gap-4 md:gap-8">
+          <div className="md:col-span-2 gap-4 md:gap-8">
             <Card className="w-full ">
               <CardHeader className="flex flex-row items-center">
                 <div className="grid gap-2">
