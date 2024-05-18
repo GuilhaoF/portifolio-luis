@@ -9,16 +9,15 @@ import {
 import Image from "next/image";
 import Hero from "../assets/Hero.jpg";
 import { BadgeTechs } from "@/components/bagde-techs";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { RecentProjects } from "@/components/recent-projects";
 
 export default function Home() {
   return (
     <Layout>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
-        <div className="grid gap-4 md:grid-cols-1 md:gap-8 lg:grid-cols-3">
+        <div className="grid  gap-4 md:grid-cols-2 md:gap-8  lg:grid-cols-2">
           {/* CARD DE BREVE RESUMO  */}
-          <Card className="flex items-center justify-center flex-col space-y-2 shadow-lg">
+          <Card className="flex items-center  justify-center flex-col space-y-2 shadow-lg">
             <CardHeader>
               <CardTitle className="font-bold text-xl sm:text-2xl md:text-3xl">
                 Luis Felipe G
@@ -60,18 +59,6 @@ export default function Home() {
           <RecentProjects />
 
           {/* CARD REDES SOCIAIS */}
-
-          {/* <Card>
-            <CardContent>
-              <CardDescription className="text-3xl font-bold text-center mt-6">
-                Tecnologias
-              </CardDescription>
-              <div className="mt-8">
-                <BadgeTechs />
-              </div>
-            </CardContent>
-          </Card> */}
-
          
         </div>
       </main>

@@ -1,10 +1,5 @@
 import Layout from "@/components/layout";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+
 import Image from "next/image";
 import ManutencaoLogo from '../assets/maintenance.png' ;
 

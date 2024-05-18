@@ -9,19 +9,22 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import Image from "next/image";
+import Hero from "../assets/Hero.jpg";
 
 export function MenuBarNav() {
   return (
-    <header className="sticky top-0 flex h-16 items-center  gap-4 border-b border-green-700 px-4 md:px-6">
+    <header className="sticky top-0 flex h-16 items-center  gap-4 border shadow-md px-4 md:px-6">
       <nav className="hidden flex-col gap-6 text-lg font-medium  bg-white  md:flex md:flex-row md:items-center md:justify-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           href="/"
           className="flex items-center gap-2 text-lg font-semibold md:text-base"
         >
-          <Avatar className="border-2 rounded-full border-green-700">
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>LF</AvatarFallback>
-          </Avatar>
+         <Image
+              src={Hero}
+              alt="avatar"
+              className="object-cover w-11 rounded-full border-4 border-green-600"
+            />
         </Link>
         <Link
           href="/about"
@@ -55,10 +58,11 @@ export function MenuBarNav() {
               href="#"
               className="flex items-center gap-2 text-lg font-semibold"
             >
-              <Avatar className="border-2 rounded-full border-green-700">
-                <AvatarImage src="https://github.com/shadcn.png" />
-                <AvatarFallback>LF</AvatarFallback>
-              </Avatar>
+              <Image
+              src={Hero}
+              alt="avatar"
+              className="object-cover w-11 rounded-full border-2 border-green-600"
+            />
               <p>Luis Felipe G</p>
             </Link>
             <Link
@@ -69,21 +73,21 @@ export function MenuBarNav() {
               Inicio
             </Link>
             <Link
-              href="#"
+              href="/about"
               className="flex gap-2 items-center text-muted-foreground hover:text-foreground"
             >
               <GanttChart size={28} />
               Experiencias
             </Link>
             <Link
-              href="#"
+              href="/projects"
               className="flex gap-2 items-center text-muted-foreground hover:text-foreground"
             >
               <FolderKanbanIcon size={28} />
               Projetos
             </Link>
             <Link
-              href="#"
+              href="/contact"
               className="flex gap-2 items-center text-muted-foreground hover:text-foreground"
             >
               <ContactIcon size={28} />

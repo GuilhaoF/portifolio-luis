@@ -16,6 +16,8 @@ import {
   useLoadScript,
 } from "@react-google-maps/api";
 import { useMemo } from "react";
+import { env } from "process";
+
 
 export default function Contact() {
   const libraries = useMemo(() => ["places"], []);
@@ -25,15 +27,17 @@ export default function Contact() {
   );
   const mapOptions = useMemo<google.maps.MapOptions>(
     () => ({
-      disableDefaultUI: true,
+      disableDefaultUI: false,
       clickableIcons: true,
-      scrollwheel: false,
+      scrollwheel: true,
+      draggable: true,
+      zoomControl: true,
     }),
     []
   );
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyDtgCZZ8vbDMHVEH8yAGupib-rd7VgfuEY",
+    googleMapsApiKey: env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
     libraries: libraries as any,
   });
 
@@ -65,7 +69,7 @@ export default function Contact() {
           </Card>
 
           {/* Card Redes Sociais */}
-          <Card className="flex-wrap">
+          <Card>
             <CardHeader>
               <CardTitle>Redes Sociais</CardTitle>
             </CardHeader>
@@ -87,8 +91,8 @@ export default function Contact() {
             </CardContent>
           </Card>
 
-          <div className="grid gap-4 md:gap-8">
-            <Card className="xl:col-span-2" x-chunk="dashboard-01-chunk-4">
+          <div className=" col-span-2 gap-4 md:gap-8">
+            <Card className="w-full ">
               <CardHeader className="flex flex-row items-center">
                 <div className="grid gap-2">
                   <CardTitle>Localizaçao</CardTitle>
@@ -103,7 +107,7 @@ export default function Contact() {
                   zoom={14}
                   center={mapCenter}
                   mapTypeId={google.maps.MapTypeId.ROADMAP}
-                  mapContainerStyle={{ width: "800px", height: "800px" }}
+                  mapContainerStyle={{ height: "50vh" }}
                   onLoad={() => console.log("Map Component Loaded...")}
                 >
                    <MarkerF position={mapCenter} onLoad={() => console.log('Marker Loaded')} />

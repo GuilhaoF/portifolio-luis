@@ -28,14 +28,14 @@ export function RecentProjects() {
   ];
 
   return (
-    <Card className="shadow-lg">
+    <Card className="shadow-lg md:col-span-2">
       <CardHeader>
         <CardTitle className="mb-4">Projetos Recentes</CardTitle>
       </CardHeader>
       <CardContent className="grid gap-8">
         {recentProjects.map((project, index) => (
           <div key={project.name} className="flex items-center gap-4">
-            <div>
+            <div className="flex items-center justify-center">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>

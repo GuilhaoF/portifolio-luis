@@ -1,7 +1,7 @@
 import { Badge } from "./ui/badge";
 import { FaReact, } from 'react-icons/fa'
 import { IoLogoJavascript } from "react-icons/io";
-import { SiTypescript, SiTailwindcss , SiExpo , SiShadcnui} from "react-icons/si";
+import { SiTypescript, SiTailwindcss , SiExpo , SiShadcnui , SiSass, SiJest} from "react-icons/si";
 import { RiNextjsLine, RiFirebaseLine  } from "react-icons/ri";
 
 export function BadgeTechs(){
@@ -12,14 +12,16 @@ export function BadgeTechs(){
     { name: 'Typescript', Icon: SiTypescript },
     { name: 'Nextjs', Icon: RiNextjsLine },
     { name: 'Tailwind Css', Icon: SiTailwindcss},
+    { name: 'Sass', Icon: SiSass},
     { name: 'Shadcn UI', Icon: SiShadcnui},
     { name: 'Firebase', Icon: RiFirebaseLine},
+    { name: 'Jest', Icon: SiJest },
 
   ];
 
 
   return(
-    <div className="flex items-start flex-col gap-4 mt-8">
+    <div className="grid grid-cols-2 gap-4 mt-8">
     {techs.map((tech, index) => (
       <Badge key={index} >
         <tech.Icon size={32} />
