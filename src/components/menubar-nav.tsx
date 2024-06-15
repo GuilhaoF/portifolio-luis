@@ -11,10 +11,12 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import Image from "next/image";
 import Hero from "../assets/Hero.jpg";
+import ModeToggle from "./toggle-theme";
 
 export function MenuBarNav() {
   return (
     <header className="sticky top-0 flex h-16 items-center  gap-4 border shadow-md px-4 md:px-6">
+     
       <nav className="hidden flex-col gap-6 text-lg font-medium  bg-white  md:flex md:flex-row md:items-center md:justify-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           href="/"
@@ -44,6 +46,7 @@ export function MenuBarNav() {
         >
           Contato e Localização
         </Link>
+        <ModeToggle />
       </nav>
 
       <Sheet>
@@ -53,6 +56,7 @@ export function MenuBarNav() {
           </Button>
         </SheetTrigger>
         <SheetContent side="left" className="bg-white">
+        
           <nav className="grid gap-6 text-lg font-medium">
             <Link
               href="#"
@@ -64,6 +68,7 @@ export function MenuBarNav() {
               className="object-cover w-11 rounded-full border-2 border-green-600"
             />
               <p>Luis Felipe G</p>
+              <ModeToggle  />
             </Link>
             <Link
               href="/"

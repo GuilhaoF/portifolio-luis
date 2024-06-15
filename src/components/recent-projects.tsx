@@ -9,6 +9,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
+import { projects } from "@/data/projects-data";
 
 interface TypeProject {
   name: string;
@@ -16,24 +17,15 @@ interface TypeProject {
   icon: "Web" | "Mobile" | "";
 }
 export function RecentProjects() {
-  const recentProjects: TypeProject[] = [
-    { icon: "Web", name: "Next-Ifood", link: "" },
-    { icon: "Web", name: "Next-Dashboard", link: "" },
-    { icon: "Mobile", name: "Ignite Gym App", link: "" },
-    { icon: "Mobile", name: "Pass in  App", link: "" },
-    { icon: "Mobile", name: "Goals App", link: "" },
-    { icon: "Web", name: "Rtx Cars", link: "" },
-    { icon: "Mobile", name: "Teams App", link: "" },
-    { icon: "Mobile", name: "Cook App", link: "" },
-  ];
+ 
 
   return (
     <Card className="shadow-lg md:col-span-2">
       <CardHeader>
-        <CardTitle className="mb-4">Projetos Recentes</CardTitle>
+        <CardTitle className="mb-4">5 Projetos mais recentes</CardTitle>
       </CardHeader>
       <CardContent className="grid gap-8">
-        {recentProjects.map((project, index) => (
+        {projects.slice(0,5).map((project, index) => (
           <div key={project.name} className="flex items-center gap-4">
             <div className="flex items-center justify-center">
               <TooltipProvider>

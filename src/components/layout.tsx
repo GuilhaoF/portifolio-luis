@@ -1,7 +1,7 @@
 // components/Layout.tsx
-import { ReactNode } from 'react';
-import { MenuBarNav } from './menubar-nav';
-
+import { ReactNode } from "react";
+import { MenuBarNav } from "./menubar-nav";
+import { ThemeProvider } from "./theme-provider";
 
 type LayoutProps = {
   children: ReactNode;
@@ -9,11 +9,10 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div>
-      <MenuBarNav />
-      <main>
-        {children}
-      </main>
-    </div>
+    
+      <div>
+        <MenuBarNav />
+        <main>{children}</main>
+      </div>
   );
 }

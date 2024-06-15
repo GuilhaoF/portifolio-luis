@@ -1,13 +1,16 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { ThemeProvider } from "@/components/theme-provider";
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
     <Html lang="pt-Br">
       <Head />
       <body>
-        <Main />
-        <NextScript />
+        <ThemeProvider>
+          <Main />
+          <NextScript />
+        </ThemeProvider>
       </body>
     </Html>
-  )
+  );
 }
