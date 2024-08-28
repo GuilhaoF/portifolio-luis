@@ -84,6 +84,8 @@ export function HeroSection() {
                 alt="hero image"
                 width={1000}
                 height={1000}
+                quality={100}
+                priority
               />
             </motion.div>
           </div>
