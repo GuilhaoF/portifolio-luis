@@ -2,18 +2,23 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="pt-Br">
+    <Html lang="pt-br">
       <Head />
       <body>
-      <div className="bubbles">
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
+        <div className="background">
+          <div className="bubbles">
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+          </div>
         </div>
-          <Main />
-          <NextScript />
+        <Main />
+        <NextScript />
       </body>
     </Html>
   );

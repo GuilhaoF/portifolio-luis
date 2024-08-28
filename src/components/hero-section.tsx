@@ -17,7 +17,7 @@ export function HeroSection() {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-black mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <h1 className="text-black mb-4 text-4xl sm:text-2xl lg:text-8xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
@@ -26,14 +26,12 @@ export function HeroSection() {
               sequence={[
                 "Luis Felipe ",
                 1000,
-                "Web Developer",
-                1000,
-                "Mobile Developer",
+                "Web e Mobile Developer",
                 1000,
               ]}
               wrapper="span"
-              speed={80}
-              repeat={Infinity}
+              speed={50}
+              repeat={2}
             />
           </h1>
           {/* <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
@@ -80,7 +78,7 @@ export function HeroSection() {
             className="absolute inset-0 flex items-center justify-center"
             >
               <Image
-                src="/hero-1.png"
+                src="/images/hero-1.png"
                 alt="hero image"
                 width={1000}
                 height={1000}

@@ -19,8 +19,16 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #f7f7f7;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
+}
+.blur-background {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.3); /* Ajuste a opacidade conforme necessário */
+  padding: 1rem; /* Adicione padding para espaçamento interno */
+  border-radius: 8px; /* Adicione bordas arredondadas, se desejar */
+  border: 2px solid #cccc; /* Adicione uma borda para separar o conteúdo do fundo */
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Adicione uma sombra para destacar o conteúdo */
 }
 
 .bubbles {
