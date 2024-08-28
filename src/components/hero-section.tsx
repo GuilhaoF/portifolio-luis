@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Contact2Icon, FileTextIcon } from "lucide-react";
 
+
 export function HeroSection() {
   return (
     <section className="lg:py-16">
