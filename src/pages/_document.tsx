@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@/components/theme-provider";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -6,10 +5,15 @@ export default function Document() {
     <Html lang="pt-Br">
       <Head />
       <body>
-        <ThemeProvider>
+      <div className="bubbles">
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+        </div>
           <Main />
           <NextScript />
-        </ThemeProvider>
       </body>
     </Html>
   );
