@@ -67,7 +67,7 @@ const TAB_DATA = [
     title: "Redes",
     id: "redes",
     content: (
-      <div className="text-gray-400 pl-2 space-y-2">
+      <div className="text-gray-400 pl-2 space-y-2" id="contact">
         <Link
           className="flex items-center gap-2"
           href="https://www.linkedin.com/in/luis-felipe-silv/"
