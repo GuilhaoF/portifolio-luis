@@ -10,6 +10,8 @@ import {
   TrophyIcon,
 } from "lucide-react";
 import Link from "next/link";
+import Meteors from "./magicui/meteors";
+
 
 const TAB_DATA = [
   {
@@ -110,23 +112,20 @@ export function AboutSection() {
   }
 
   return (
-    <section className="text-black" id="about">
+    <section className="relative mt-4 flex w-full flex-col items-center justify-center overflow-hidden rounded-lg py-8  border-2 border-green-500 bg-background md:shadow-xl" id="about">
+      <Meteors number={250} />
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           src="/images/about.jpg"
           alt="Luis Felipe"
-          width={600}
-          height={600}
-          className=""
+          width={500}
+          height={500}
+          className="z-20 rounded-lg"
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-black mb-4">Sobre Mim</h2>
-          <div className="blur-background text-gray-500 p-14">
-            Meu nome é Luis Felipe, tenho 25 anos e sou desenvolvedor de
-            software. Atualmente trabalho como desenvolvedor freelancer , com
-            projetos para a comunidade. Tenho trabalhado com tecnologias como
-            ReactJs, NextJs e React Native. Sou apaixonado por tecnologia e
-            sempre busco aprender coisas novas.
+          <div className="blur-background text-gray-800 p-14">
+          Me chamo Luis Felipe sou desenvolvedor front-end e mobile com experiência na criação de interfaces modernas e intuitivas usando <strong>React,NextJs ,Typescript e React Native</strong>. No estágio, desenvolvi features e dei manutenção na plataforma inteligente de peixes e camarão na Aquabit, criei vários projetos pessoais e para comunidade como o Rifa Social 2.0, impactando na comunidade local. Focado em entregar soluções escaláveis e de alta qualidade, estou sempre em busca de novos desafios para aprimorar a experiência do usuário
           </div>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -163,6 +162,8 @@ export function AboutSection() {
           </div>
         </div>
       </div>
+
+     
     </section>
   );
 }

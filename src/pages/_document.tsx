@@ -25,18 +25,6 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
-        <div className="background">
-          <div className="bubbles">
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-          </div>
-        </div>
         <Main />
         <NextScript />
       </body>
