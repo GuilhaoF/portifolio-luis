@@ -10,28 +10,17 @@ export function HeroSection() {
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         {/* Secao de Informacoes */}
-        <div
-          className="col-span-8 place-self-center text-center justify-self-start"
-        >
-          {/* <div className="flex flex-col items-center sm:items-start mx-4">
-            <GradualSpacing
-              className="font-display text-center sm:text-left text-4xl font-bold tracking-[-0.1em] text-black md:text-2xl  break-words"
-              text="Luis Felipe"
-            />
-          
-          
-          </div> */}
+        <div className="col-span-8 place-self-center text-center justify-self-start">
           <div className="container flex flex-col">
-          <GradualSpacing
+            <GradualSpacing
               className="text-2xl lg:text-4xl font-bold md:leading-[5rem]  text-black"
               text="Luis Felipe"
             />
-          <GradualSpacing
+            <GradualSpacing
               className="text-2xl lg:text-4xl font-bold text-black"
               text="Front-end e Mobile Developer "
             />
           </div>
-         
 
           <div className="mx-4">
             <Link
@@ -43,7 +32,9 @@ export function HeroSection() {
             </Link>
 
             <Link
-              href="/"
+              href="/Cv/Demo-CV.pdf"
+              download={"My-CV"}
+              target="_blank"
               className="p-4 inline-block py-2 w-full sm:w-fit rounded-full mx-2 text-white mt-3"
             >
               <span className="block bg-[#121212]  rounded-full px-5 py-2">

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Image from "next/image";
 import { useState, useTransition } from "react";
 import TabButton from "./tabbar-button";
@@ -12,13 +12,12 @@ import {
 import Link from "next/link";
 import Meteors from "./magicui/meteors";
 
-
 const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="text-gray-400 pl-2">
+      <ul className="text-gray-400  grid grid-cols-1 sm:grid-cols-2 ">
         <li>ReactJs</li>
         <li>NextJs</li>
         <li>React Native</li>
@@ -27,6 +26,9 @@ const TAB_DATA = [
         <li>Javascript</li>
         <li>Typescript</li>
         <li>Styled-Components</li>
+        <li>Zustand</li>
+        <li>Firebase</li>
+        <li>Git e Github</li>
       </ul>
     ),
   },
@@ -112,7 +114,10 @@ export function AboutSection() {
   }
 
   return (
-    <section className="relative mt-4 flex w-full flex-col items-center justify-center overflow-hidden rounded-lg py-8  border-2 border-green-500 bg-background md:shadow-xl" id="about">
+    <section
+      className="relative mt-4 flex w-full flex-col items-center justify-center overflow-hidden rounded-lg py-8  border-2 border-green-500 bg-background md:shadow-xl"
+      id="about"
+    >
       <Meteors number={250} />
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
@@ -125,7 +130,15 @@ export function AboutSection() {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-black mb-4">Sobre Mim</h2>
           <div className="blur-background text-gray-800 p-14">
-          Me chamo Luis Felipe sou desenvolvedor front-end e mobile com experiência na criação de interfaces modernas e intuitivas usando <strong>React,NextJs ,Typescript e React Native</strong>. No estágio, desenvolvi features e dei manutenção na plataforma inteligente de peixes e camarão na Aquabit, criei vários projetos pessoais e para comunidade como o Rifa Social 2.0, impactando na comunidade local. Focado em entregar soluções escaláveis e de alta qualidade, estou sempre em busca de novos desafios para aprimorar a experiência do usuário
+            Me chamo Luis Felipe sou desenvolvedor front-end e mobile com
+            experiência na criação de interfaces modernas e intuitivas usando{" "}
+            <strong>React,NextJs ,Typescript e React Native</strong>. No
+            estágio, desenvolvi features e dei manutenção na plataforma
+            inteligente de peixes e camarão na Aquabit, criei vários projetos
+            pessoais e para comunidade como o Rifa Social 2.0, impactando na
+            comunidade local. Focado em entregar soluções escaláveis e de alta
+            qualidade, estou sempre em busca de novos desafios para aprimorar a
+            experiência do usuário
           </div>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -162,8 +175,6 @@ export function AboutSection() {
           </div>
         </div>
       </div>
-
-     
     </section>
   );
 }
