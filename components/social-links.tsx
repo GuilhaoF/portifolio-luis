@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaDiscord, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 const socials = [
-    {icon: <FaGithub />, link: ""},
-    {icon: <FaLinkedinIn />, link: ""},
+    { icon: <FaGithub />, link: "https://github.com/GuilhaoF" },
+    { icon: <FaLinkedinIn />, link: "https://www.linkedin.com/in/luis-felipe-silv/" },
+    { icon: <FaDiscord />, link: "#sh4kah" },
 ]
 
 interface SocialProps {
@@ -11,12 +12,12 @@ interface SocialProps {
     iconStyles: string;
 }
 
-export function Social({containerStyles, iconStyles}: SocialProps) {
+export function Social({ containerStyles, iconStyles }: SocialProps) {
     return (
         <div className={containerStyles}>
             {socials.map((item, index) => (
                 <Link key={index} href={item.link} className={iconStyles}>
-                    {item.icon} 
+                    {item.icon}
                 </Link>
             ))}
         </div>

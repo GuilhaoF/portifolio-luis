@@ -10,14 +10,14 @@ export function ProfilePic() {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
+          transition: { delay: 0.2, duration: 0.4, ease: "easeIn" },
         }}
       >
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+            transition: { delay: 0.2, duration: 0.4, ease: "easeIn" },
           }}
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]"
         >
@@ -26,7 +26,7 @@ export function ProfilePic() {
             priority
             quality={100}
             fill
-            alt=""
+            alt="imagem de usuario"
             className="object-contain rounded-full"
           />
 
@@ -41,7 +41,7 @@ export function ProfilePic() {
               cx="253"
               cy="253"
               r="250"
-              stroke="#00ffff"
+              stroke="#0de618"
               strokeWidth="4"
               strokeLinecap="round"
               strokeLinejoin="round"

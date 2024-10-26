@@ -35,8 +35,8 @@ export default function Nav() {
             href={link.path}
             key={index}
             className={`${
-              link.path === pathname && "text-accent border-b-2 border-accent"
-            } captalize font-medium hover:text-accent transition-all`}
+              link.path === pathname && "text-white border-b-2 border-green-500"
+            } captalize font-medium hover:text-gray-500 transition-all`}
           >
             {link.name}
           </Link>

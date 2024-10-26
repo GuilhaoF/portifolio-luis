@@ -1,7 +1,8 @@
+import CarrouselSkills from "@/components/carrousel-skills";
+import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import { ProfilePic } from "../components/profile-pic";
 import { Social } from "../components/social-links";
-import { Button } from "../components/ui/button";
 
 
 export default function Home() {
@@ -16,21 +17,24 @@ export default function Home() {
             </h1>
             <span className=" text-[1.5rem] text-green-500">Luis Felipe Guilhao</span>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant={'ghost'} size="lg" className="uppercase flex items-center gap-2">
+
+              <Button variant="outline" size="lg" className=" bg-primary rounded-lg shadow-xl uppercase flex items-center gap-2">
                 <span>Baixar Currículo</span>
                 <FiDownload className="text-xl" />
               </Button>
+
               <div className="mb-8 xl:mb-0">
-                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover: transition-all
+                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-green-500 rounded-full flex justify-center items-center text-white text-base hover: transition-all
                   duration-500"/>
               </div>
             </div>
           </div>
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
-              <ProfilePic />
+            <ProfilePic />
           </div>
         </div>
       </div>
+      <CarrouselSkills />
     </div>
   );
 }

@@ -21,6 +21,12 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/components/ui/*": [
+        "./components/ui/*"
       ]
     },
     "plugins": [
